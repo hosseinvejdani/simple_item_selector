@@ -15,23 +15,25 @@ class ItemSelector extends StatefulWidget {
   final OnSelected onSelected;
   final Color? activeBackgroundColor;
   final Color? inactiveBackgroundColor;
-  final EdgeInsetsGeometry? padding;
-  final EdgeInsetsGeometry? margin;
-  final double? borderRadius;
+  final EdgeInsetsGeometry? itemPadding;
+  final EdgeInsetsGeometry? itemMargin;
   final Direction? direction;
+  final BorderRadius? itemBorderRadius;
+  final Border? itemBorder;
   //
   ItemSelector({
     Key? key,
-    this.initIndex = 0,
     required this.itemsCount,
     required this.items,
     required this.onSelected,
+    this.initIndex = 0,
     this.activeBackgroundColor,
     this.inactiveBackgroundColor,
-    this.padding,
-    this.margin,
-    this.borderRadius,
+    this.itemPadding,
+    this.itemMargin,
     this.direction = Direction.horizental,
+    this.itemBorderRadius,
+    this.itemBorder,
   }) : super(key: key);
 
   @override
@@ -44,9 +46,9 @@ class _ItemSelectorState extends State<ItemSelector> {
   //
   Color? activeBackgroundColor;
   Color? inactiveBackgroundColor;
-  EdgeInsetsGeometry? padding;
-  EdgeInsetsGeometry? margin;
-  double? borderRadius;
+  EdgeInsetsGeometry? itemPadding;
+  EdgeInsetsGeometry? itemMargin;
+
   //
 
   @override
@@ -70,13 +72,11 @@ class _ItemSelectorState extends State<ItemSelector> {
     inactiveBackgroundColor = widget.inactiveBackgroundColor ?? Theme.of(context).disabledColor;
 
     /// Assings padding if its default value is null!
-    padding = widget.padding ?? const EdgeInsets.all(8.0);
+    itemPadding = widget.itemPadding ?? const EdgeInsets.all(8.0);
 
     /// Assings margin if its default value is null!
-    margin = widget.margin ?? const EdgeInsets.all(0.0);
+    itemMargin = widget.itemMargin ?? const EdgeInsets.all(0.0);
 
-    /// Assings borderRadius if its default value is null!
-    borderRadius = widget.borderRadius ?? 5.0;
     // ================================
     return widget.direction == Direction.horizental
         ? Row(
@@ -97,10 +97,11 @@ class _ItemSelectorState extends State<ItemSelector> {
     return GestureDetector(
       onTap: () => _handleOnTap(index),
       child: Container(
-        margin: margin,
-        padding: padding,
+        margin: itemMargin,
+        padding: itemPadding,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(borderRadius!)),
+          borderRadius: widget.itemBorderRadius,
+          border: widget.itemBorder,
           color: _currentIndex == index ? activeBackgroundColor : inactiveBackgroundColor,
         ),
         child: widget.items[index],

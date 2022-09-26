@@ -11,58 +11,36 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-This is a simple item selector widget. you can pass any list of widgets as your items in horizental or vertical axis directions. user can select one of them with a simple tap.
-
+This package contains ItemSelector(), a simple scrollable item selector widget. when developers have a list of items or widgets, then they can use ItemSelector() widget to build a simple and beautiful item selector in Flutter App. 
 
 ## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Developers can pass any arbitrary list of widgets as items in horizontal or vertical axis directions. And Users can iteract with items and they can select one of them with a simple tap. Developer have access to the index of the selected item with onSelected attribute.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To use this package, add simple_item_selector as a dependency in your pubspec.yaml file. Then import the package like this:
+```
+import 'package:simple_item_selector/simple_item_selector.dart';
+```
 
 ## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+This is Simple example:
 
 ```dart
-import 'package:flutter/material.dart';
-import 'package:simple_item_selector/simple_item_selector.dart';
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
-            child: Center(
-              child: ItemSelector(
-                activeBackgroundColor: Colors.amberAccent,
-                inactiveBackgroundColor: Colors.grey[200],
-                padding: EdgeInsets.all(12.0),
-                margin: EdgeInsets.all(2.0),
-                initIndex: 0,
-                itemsCount: 3,
-                items: [Text('a1'), Text('a2'), Text('a3')],
-                onSelected: (index) {
-                  // the selected index can be accessed via this mehtod!
-                  // print('= = => $index');
-                },
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
+ItemSelector(
+  direction: Direction.horizental,
+  activeBackgroundColor: Colors.amberAccent,
+  inactiveBackgroundColor: Colors.grey[300],
+  itemMargin: const EdgeInsets.all(2.0),
+  itemPadding: const EdgeInsets.all(15.0),
+  itemBorderRadius: const BorderRadius.all(Radius.circular(5.0)),
+  itemsCount: 4, // should be <= items.length
+  items: const [Text('a1'), Text('a2'), Text('a3'), Text('a4')], // any arbitrary widget list
+  onSelected: (index) {
+    // you can access selected item index here!
+    print(index);
+  },
+)
 ```
 
 ## Additional information
