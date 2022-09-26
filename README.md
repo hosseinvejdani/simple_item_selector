@@ -36,7 +36,7 @@ This is Simple example:
 
 ```dart
 ItemSelector(
-  direction: Direction.horizental,
+  direction: Direction.horizontal,
   activeBackgroundColor: Colors.amberAccent,
   inactiveBackgroundColor: Colors.grey[300],
   itemMargin: const EdgeInsets.all(2.0),
