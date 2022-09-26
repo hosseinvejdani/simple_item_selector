@@ -4,7 +4,7 @@ library simple_item_selector;
 
 import 'package:flutter/material.dart';
 
-enum Direction { vertical, horizental }
+enum Direction { vertical, horizontal }
 
 typedef OnSelected = void Function(int? index);
 
@@ -31,7 +31,7 @@ class ItemSelector extends StatefulWidget {
     this.inactiveBackgroundColor,
     this.itemPadding,
     this.itemMargin,
-    this.direction = Direction.horizental,
+    this.direction = Direction.horizontal,
     this.itemBorderRadius,
     this.itemBorder,
   }) : super(key: key);
@@ -75,7 +75,7 @@ class _ItemSelectorState extends State<ItemSelector> {
     itemMargin = widget.itemMargin ?? const EdgeInsets.all(0.0);
 
     // ================================
-    return widget.direction == Direction.horizental
+    return widget.direction == Direction.horizontal
         ? Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
