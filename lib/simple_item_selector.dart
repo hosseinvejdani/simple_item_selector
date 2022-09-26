@@ -43,14 +43,11 @@ class ItemSelector extends StatefulWidget {
 class _ItemSelectorState extends State<ItemSelector> {
   //
   int? _currentIndex;
-  //
   Color? activeBackgroundColor;
   Color? inactiveBackgroundColor;
   EdgeInsetsGeometry? itemPadding;
   EdgeInsetsGeometry? itemMargin;
-
   //
-
   @override
   void initState() {
     _currentIndex = widget.initIndex;
