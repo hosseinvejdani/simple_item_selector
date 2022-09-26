@@ -10,8 +10,16 @@ For general information about developing packages, see the Dart guide for
 and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
+[![pub](https://img.shields.io/pub/v/simple_item_selector.svg)](https://pub.dev/packages/simple_item_selector)
+[![license: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This package contains ItemSelector(), a simple scrollable item selector widget. when developers have a list of items or widgets, then they can use ItemSelector() widget to build a simple and beautiful item selector in Flutter App. 
+
+## Preview
+
+| Horizontal | Vertical |
+|:---:|:---:|
+| ![Horizontal](https://github.com/hosseinvejdani/simple_item_selector/blob/master/doc/images/horizontal.png "Horizontal") | ![Vertical](https://github.com/hosseinvejdani/simple_item_selector/blob/master/doc/images/vertical.png "Vertical") |
 
 ## Features
 Developers can pass any arbitrary list of widgets as items in horizontal or vertical axis directions. And Users can iteract with items and they can select one of them with a simple tap. Developer have access to the index of the selected item with onSelected attribute.
