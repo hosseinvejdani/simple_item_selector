@@ -19,7 +19,7 @@ This package contains ItemSelector(), a simple scrollable item selector widget. 
 
 | Horizontal | Vertical |
 |:---:|:---:|
-| ![Horizontal](https://github.com/hosseinvejdani/simple_item_selector/blob/master/doc/images/horizontal.png "Horizontal") | ![Vertical](https://github.com/hosseinvejdani/simple_item_selector/blob/master/doc/images/vertical.png "Vertical") |
+| ![Horizontal](https://github.com/hosseinvejdani/simple_item_selector/raw/master/doc/images/horizontal.png "Horizontal") | ![Vertical](https://github.com/hosseinvejdani/simple_item_selector/raw/master/doc/images/vertical.png "Vertical") |
 
 ## Features
 Developers can pass any arbitrary list of widgets as items in horizontal or vertical axis directions. And Users can iteract with items and they can select one of them with a simple tap. Developer have access to the index of the selected item with onSelected attribute.
