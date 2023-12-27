@@ -5,3 +5,7 @@
 ## [0.0.2] 
 
 * add preview images.
+  
+## [0.0.3] 
+
+* modify preview images.
