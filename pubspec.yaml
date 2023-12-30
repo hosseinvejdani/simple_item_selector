@@ -1,6 +1,6 @@
 name: simple_item_selector
 description: A Flutter package which contains ItemSelector(). ItemSelector() is a simple scrollable item selector widget. when developers have a list of items or widgets, then they can use ItemSelector() widget to build a simple and beautiful item selector in Flutter App.
-version: 0.0.4
+version: 0.0.5
 homepage: "https://github.com/hosseinvejdani/simple_item_selector"
 
 environment:
